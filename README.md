@@ -112,8 +112,7 @@ print(answers[0])
 
 * **Fast Attention Primitives for Head-Sparse Attention**
 
-  * `AttentionBackend.COMPACTOR_TRITON`: custom Triton kernel for sparse variable-length attention with KV caching (i.e 
-  * each head might have variable lengths) .
+  * `AttentionBackend.COMPACTOR_TRITON`: custom Triton kernel for sparse variable-length attention with KV caching (i.e each head might have variable lengths) .
   * Faster than FlashAttention3 for long contexts (even under full KV cache/no compression)
 ![flash_attn_vs_triton_l40.png](flash_attn_vs_triton_l40.png)
 * **Paged KV-cache manager**
