@@ -1,0 +1,23 @@
+[project]
+name = "compactor-vllm"
+description = "Fast KV Cache Compression for LLMs"
+version = "0.0.1"
+dependencies = [
+    "triton>=3.5.0",
+    "transformers",
+    "torch>=2.9.0",
+    "safetensors",
+    "tqdm",
+    "flash-attn",
+    "pytest"
+]
+requires-python = ">= 3.8"
+authors = [
+  {name = "Vivek Chari", email = "viveknchari@gmail.com"},
+]
+[project.optional-dependencies]
+evaluate = ["rouge", "pandas",  "fuzzywuzzy"]
+[tool.ruff]
+exclude = [
+    "triton_kernels"
+]
