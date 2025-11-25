@@ -8,7 +8,7 @@ import torch
 import triton
 
 from compactor_vllm.compression.common import scores_to_retain_indices
-from compactor_vllm.kv_cache.store_kv_cache import prefill_store_topk_kv
+from src.compactor_vllm.kv_cache.store_kv_cache import prefill_store_topk_kv
 
 logger = logging.getLogger(__name__)
 

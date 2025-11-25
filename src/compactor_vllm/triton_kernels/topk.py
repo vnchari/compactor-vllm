@@ -1,7 +1,7 @@
 import torch
 import triton
 from compactor_vllm.triton_kernels.topk_details._topk_forward import _topk_forward
-from compactor_vllm.triton_kernels.topk_details._topk_backward import _topk_backward
+from compactor_vllm.triton_kernels.topk_details import _topk_backward
 from compactor_vllm.triton_kernels.tensor import Tensor, Bitmatrix
 from typing import Optional, Union
 

@@ -18,7 +18,7 @@ from compactor_vllm.compression import (
     SequenceCompressionParams,
 )
 from compactor_vllm.config.engine_config import AttentionBackend
-from evaluate.ruler_metrics import score_function
+from ruler_metrics import score_function
 
 
 def parse_args() -> argparse.Namespace:

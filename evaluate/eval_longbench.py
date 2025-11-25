@@ -14,7 +14,7 @@ from compactor_vllm.compression import (
     SequenceCompressionParams,
 )
 from compactor_vllm.config.engine_config import AttentionBackend
-from evaluate.longbench_metrics import dataset2metric
+from longbench_metrics import dataset2metric
 
 if __name__ == "__main__":
     logging.basicConfig(
