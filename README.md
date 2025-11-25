@@ -49,7 +49,7 @@ On the RULER 4K dataset with an H100 GPU, compactor-vllm reduces peak KV cache m
 
 ![Memory Usage](vllm_memory_comparison.png)
 
-### Task Performance (RULER Benchmark, Compactor KV Compression)
+### Task Performance (RULER Benchmark, Compactor KV Compression, Query Agnostic)
 
 | KV Discarded | 0%    | 25%   | 50%   | 75%   | 95%   |
 |--------------|-------|-------|-------|-------|-------|
@@ -209,6 +209,7 @@ print(list(MODEL_REGISTRY.keys()))
 Control how aggressively to compress the KV cache:
 
 ```python
+from compactor_vllm.compression import SequenceCompressionParams
 # Retain 50% of KV cache (discard 50%)
 sequence_compression = SequenceCompressionParams(compression_ratio=0.5)
 

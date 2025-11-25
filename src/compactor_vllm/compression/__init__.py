@@ -35,4 +35,5 @@ __all__ = [
     "CompressionMethod",
     "BatchCompressionParams",
     "SequenceCompressionParams",
+    "COMPRESSION_REGISTRY"
 ]
