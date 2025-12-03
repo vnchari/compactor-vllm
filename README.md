@@ -1,7 +1,7 @@
 # compactor-vllm
 [![arXiv](https://img.shields.io/badge/arXiv-2507.08143-b31b1b.svg)](https://arxiv.org/abs/2507.08143)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
+![Token Throughput](vllm_throughput_comparison.png)
 **Nearly zero-overhead KV-cache compression in a minimal vLLM-style engine**
 
 Long-context LLMs quickly become bottlenecked by the key–value (KV) cache: memory usage and bandwidth both scale linearly with the number of tokens. **compactor-vllm** is a small, simple inference engine that makes long-context inference more practical by combining:
@@ -39,9 +39,7 @@ Carefully overlapped KV compression operations with memory-bound portions of the
 
 ### Throughput Comparison (50% KV Retention)
 
-At 50% KV retention, compactor-vllm achieves comparable throughput to **uncompressed vLLM** while using significantly less memory.
-
-![Token Throughput](vllm_throughput_comparison.png)
+At 50% KV retention, compactor-vllm achieves comparable throughput to **uncompressed vLLM** while using significantly less memory (see the first image).
 
 ### Memory Usage (60% KV Retention)
 
